@@ -1,4 +1,4 @@
-# translate-cpp-test-example
+# gcp-translate-cpp-example
 
 Note: This is meant to be run on GCP Cloud VM.
 Make sure VM is allowed to execute all GCP Access scopes.
