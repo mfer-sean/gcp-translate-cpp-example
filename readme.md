@@ -1,4 +1,4 @@
-# translate-cpp-test
+# translate-cpp-test-example
 
 Note: This is meant to be run on GCP Cloud VM.
 Make sure VM is allowed to execute all GCP Access scopes.
@@ -26,7 +26,7 @@ vi /etc/ld.so.conf.d/locallib.conf
 # setup this repo
 cd ..
 git clone THIS_REPO.git
-cd REPO folder
+cd REPO_FOLDER
 
 # test code
 chmod u+x run.sh
