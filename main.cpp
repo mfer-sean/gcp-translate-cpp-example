@@ -16,7 +16,7 @@ int main(
   cout << ">>>> C++ Start!\n" ; 
 
   // Get token from environment var.
-  // You can also do the same in your code.
+  // You can also create token using http request in your c++ code.
   // curl equivalent:
   // curl -s "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token" -H "Metadata-Flavor: Google" | jq -r .access_token
   // GCP access tokens expire after 60 minutes.
