@@ -34,16 +34,17 @@ int main(
   headers["Content-Type"] = "application/json; charset=utf-8";
 
 
-  std::string authString; //= new char[1000];
+  std::string authString; 
   authString.append("Bearer ");
   authString.append(gcp_token_val);
 
   headers["Authorization"] = authString;
   conn->SetHeaders(headers);
-  // authString.append("");
 
-
-  RestClient::Response r = conn->post("/v2", "{\"q\": [\"Hello world\", \"My name is Jeff\"],\"target\": \"de\"}");
+  
+  std::string request_body = "{\"q\": [\"Hello world\", \"My name is Jeff\"],\"target\": \"de\"}";
+  cout <<  endl << "Translate request body: \n" << request_body << endl << endl;
+  RestClient::Response r = conn->post("/v2", request_body);
 
   cout << "Translate request response_body: " << endl;
   cout << r.body << endl;
