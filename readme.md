@@ -1,10 +1,14 @@
 # translate-cpp-test
 
+Note: This is meant to be run on GCP Cloud VM.
+Make sure VM is allowed to execute all GCP Access scopes.
+
 ## Initial setup on CentOS 7
 ```sh
 #initial linux tools setup
+cd ~
 yum install gcc-c++
-sudo yum group install "Development Tools"
+yum group install "Development Tools"
 yum install libcurl
 
 # compile restclient library
