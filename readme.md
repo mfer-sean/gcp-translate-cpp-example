@@ -21,7 +21,9 @@ make install
 
 # link newly compiled libraries
 vi /etc/ld.so.conf.d/locallib.conf
-	/usr/local/lib/ ← save and quit
+	# add the following:
+	/usr/local/lib/ 
+	# then save and quit
 
 # setup this repo
 cd ..
