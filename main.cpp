@@ -10,6 +10,10 @@
 
 using namespace std;
 
+// If running on GCP, get token for current Service Account, and return token
+// curl equivalent:
+// curl -s "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token" -H "Metadata-Flavor: Google" | jq -r .access_token
+// FYI GCP access tokens expire after 60 minutes.
 std::string getToken() {
   // initialize RestClient
   RestClient::init();
@@ -40,6 +44,7 @@ std::string getToken() {
   return token;
 }
 
+// given token and translate request body, send out translate request.
 void translate (std::string token, std::string request_body) {
   // initialize RestClient
   RestClient::init();
