@@ -2,7 +2,7 @@
 echo ">> bash script start"
 
 # Compile main.cpp into executable, also linking curl and restclient libraries
-g++ -lrestclient-cpp -lcurl main.cpp
+g++ -std=c++11 -lrestclient-cpp -lcurl main.cpp
 
 # Get token for current Service Account, and save as evironment variable - will be used by executable.
 export GCP_TOKEN="$(gcloud auth application-default print-access-token)" 
